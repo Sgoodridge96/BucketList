@@ -1,38 +1,57 @@
+body {
+  background: #4b4b4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.BucketListWrapper {
+  background: rgb(174, 174, 174);
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.BucketListForm {
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bucket-list-input {
+  background: none;
+  border: 1px solid #ffffff;
+  padding: 0.5rem 1rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  width: 300px;
+  color: #fff;
+}
+
+.bucket-list-input::placeholder {
+  color: #4b4b4b;
+}
+
+.bucket-list-btn {
+  background: #ffffff;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+    
+}
+
+.BucketList {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background: #8758ff;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
