@@ -12,7 +12,7 @@ export const BucketListWrapper = () => {
   }
   
   return (
-    // console.log(bktList),
+    console.log(bktList),
     <div className='BucketListWrapper'>
       <BucketListForm addToList={addToList} />
     </div>
