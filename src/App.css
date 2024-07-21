@@ -19,7 +19,7 @@ body {
 
 .BucketListForm {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .bucket-list-input {
@@ -38,9 +38,9 @@ body {
 
 .bucket-list-btn {
   background: #ffffff;
-  color: #fff;
+  color: rgb(174, 174, 174);
   border: none;
-  padding: 0.55rem;
+  padding: .55rem;
   cursor: pointer;
     
 }
