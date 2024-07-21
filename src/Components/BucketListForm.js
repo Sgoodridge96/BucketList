@@ -7,7 +7,6 @@ export const BucketListForm = ({addToList}) => {
     e.preventDefault();
     addToList(value);
     setValue("")
-    // console.log(value)
 
   }
 
