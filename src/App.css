@@ -14,20 +14,22 @@ body {
   background: rgb(174, 174, 174);
   margin-top: 5rem;
   padding: 2rem;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .BucketListForm {
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .bucket-list-input {
+  outline: none;
   background: none;
-  border: 1px solid #ffffff;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
   padding: 0.5rem 1rem;
-  margin-top: 3rem;
-  margin-bottom: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   width: 300px;
   color: #fff;
 }
@@ -40,7 +42,9 @@ body {
   background: #ffffff;
   color: rgb(174, 174, 174);
   border: none;
-  padding: .55rem;
+  border-radius: 10px;
+  padding: 0.55rem;
+  margin-left: 0.5rem;
   cursor: pointer;
     
 }
@@ -49,9 +53,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #8758ff;
-  color: #fff;
+  background: #4b4b4b;
+  color: rgb(255, 255, 255);
   padding: 0.75rem 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-bottom: 1rem;
+}
+
+.fa-trash-arrow-up {
+  margin-left: 1rem;
+  margin-right: 0.5rem
 }

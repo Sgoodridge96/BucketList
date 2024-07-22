@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { BucketListForm } from './BucketListForm'
 import {v4 as uuidv4} from 'uuid';
-uuidv4();
+import { BucketList } from './BucketList';
 
 export const BucketListWrapper = () => {
   const [bktList, setBktList] = useState([])
@@ -15,6 +15,7 @@ export const BucketListWrapper = () => {
     console.log(bktList),
     <div className='BucketListWrapper'>
       <BucketListForm addToList={addToList} />
+      <BucketList bktList={bktList}/>
     </div>
   )
 }
