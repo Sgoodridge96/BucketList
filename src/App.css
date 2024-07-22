@@ -9,7 +9,6 @@ body {
   text-align: center;
 }
 
-
 .BucketListWrapper {
   background: rgb(174, 174, 174);
   margin-top: 5rem;
@@ -46,7 +45,6 @@ body {
   padding: 0.55rem;
   margin-left: 0.5rem;
   cursor: pointer;
-    
 }
 
 .BucketList {
@@ -62,5 +60,5 @@ body {
 
 .fa-trash-arrow-up {
   margin-left: 1rem;
-  margin-right: 0.5rem
+  margin-right: 0.5rem;
 }
