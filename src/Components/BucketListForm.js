@@ -3,8 +3,8 @@ import React, {useState} from 'react'
 export const BucketListForm = ({addToList}) => {
   const [value, setValue] = useState("")
 
-  const handleSubmit = e => {
-    e.preventDefault();
+  const handleSubmit = userInput => {
+    userInput.preventDefault();
     addToList(value);
     setValue("")
 
@@ -14,7 +14,7 @@ export const BucketListForm = ({addToList}) => {
 
     <form className='BucketListForm' onSubmit={handleSubmit}>
       <input type="text" className='bucket-list-input' value={value} 
-      placeholder='Enter' onChange={(e) => setValue(e.target.value)}/>
+      placeholder='Enter' onChange={(userInput) => setValue(userInput.target.value)}/>
       <button type='submit' className='bucket-list-btn'>Add Item
       </button>
     </form>
