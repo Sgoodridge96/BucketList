@@ -17,7 +17,11 @@ export const BucketList = ({ addItem, toggleComplete }) => {
         {addItem.addItem}
       </p>
       <div>
-        <FontAwesomeIcon icon={faSquareCheck} className="icon" />
+        <FontAwesomeIcon
+          icon={faSquareCheck}
+          className="icon"
+          onClick={() => toggleComplete(addItem.id)}
+        />
         <FontAwesomeIcon icon={faPenToSquare} className="icon" />
         <FontAwesomeIcon icon={faTrashArrowUp} className="icon" />
       </div>
