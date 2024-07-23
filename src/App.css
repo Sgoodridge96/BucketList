@@ -1,7 +1,8 @@
 body {
   background: #4b4b4b;
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  padding-left: 2rem;
   align-items: center;
 }
 
@@ -9,11 +10,10 @@ body {
   text-align: center;
 }
 
-
 .BucketListWrapper {
   background: rgb(174, 174, 174);
-  margin-top: 5rem;
-  padding: 2rem;
+  margin-top: 4rem;
+  padding: 0.5rem 1rem;
   border-radius: 10px;
 }
 
@@ -25,9 +25,9 @@ body {
 .bucket-list-input {
   outline: none;
   background: none;
-  border: 1px solid rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 10px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
   width: 300px;
@@ -36,17 +36,18 @@ body {
 
 .bucket-list-input::placeholder {
   color: #4b4b4b;
+  font-variant: small-caps;
 }
 
 .bucket-list-btn {
   background: #ffffff;
-  color: rgb(174, 174, 174);
+  color: #4b4b4b;
   border: none;
   border-radius: 10px;
-  padding: 0.55rem;
+  padding: 0.55rem 0.55rem;
   margin-left: 0.5rem;
   cursor: pointer;
-    
+  font-variant: small-caps;
 }
 
 .BucketList {
@@ -55,12 +56,32 @@ body {
   align-items: center;
   background: #4b4b4b;
   color: rgb(255, 255, 255);
-  padding: 0.75rem 1rem;
+  padding: 0.1rem 0.75rem;
   border-radius: 10px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  font-variant: small-caps;
 }
 
 .fa-trash-arrow-up {
   margin-left: 1rem;
-  margin-right: 0.5rem
+  margin-right: 0.5rem;
+}
+
+.icon {
+  transition: transform 0.1s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.current-list {
+  font-size: 110%;
+  font-variant: small-caps;
+}
+
+.title {
+  font-size: 180%;
+  font-variant: small-caps;
+  margin-bottom: 0.5rem;
 }
