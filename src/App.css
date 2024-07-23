@@ -1,7 +1,8 @@
 body {
   background: #4b4b4b;
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  padding-left: 2rem;
   align-items: center;
 }
 
@@ -11,8 +12,8 @@ body {
 
 .BucketListWrapper {
   background: rgb(174, 174, 174);
-  margin-top: 5rem;
-  padding: 2rem;
+  margin-top: 4rem;
+  padding: 0.5rem 1rem;
   border-radius: 10px;
 }
 
@@ -26,7 +27,7 @@ body {
   background: none;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 10px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
   width: 300px;
@@ -39,12 +40,13 @@ body {
 
 .bucket-list-btn {
   background: #ffffff;
-  color: rgb(174, 174, 174);
+  color: #4b4b4b;
   border: none;
   border-radius: 10px;
   padding: 0.55rem;
   margin-left: 0.5rem;
   cursor: pointer;
+  scale: 100%;
 }
 
 .BucketList {
@@ -53,9 +55,9 @@ body {
   align-items: center;
   background: #4b4b4b;
   color: rgb(255, 255, 255);
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0.75rem;
   border-radius: 10px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .fa-trash-arrow-up {
