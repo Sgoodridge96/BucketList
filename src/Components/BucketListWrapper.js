@@ -13,6 +13,16 @@ export const BucketListWrapper = () => {
     ]);
   };
 
+  const toggleComplete = (id) => {
+    setBktList(
+      bktList.map((listItem) =>
+        listItem.id === id
+          ? { ...listItem, completed: !listItem.completed }
+          : listItem
+      )
+    );
+  };
+
   return (
     console.log(bktList),
     (
@@ -21,8 +31,12 @@ export const BucketListWrapper = () => {
         <BucketListForm addToList={addToList} />
         <p className="current-list">Current Bucket List</p>
         {/* add an item to the list */}
-        {bktList.map((listItem, index) => (
-          <BucketList addItem={listItem} key={index} />
+        {bktList.map((listItem) => (
+          <BucketList
+            addItem={listItem}
+            key={listItem.id}
+            toggleComplete={toggleComplete}
+          />
         ))}
       </div>
     )
