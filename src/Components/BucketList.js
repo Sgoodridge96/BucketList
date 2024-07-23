@@ -9,8 +9,8 @@ export const BucketList = ({ addItem }) => {
       {/* */}
       <p>{addItem.addItem}</p>
       <div>
-        <FontAwesomeIcon icon={faPenToSquare} />
-        <FontAwesomeIcon icon={faTrashArrowUp} />
+        <FontAwesomeIcon icon={faPenToSquare} className="icon" />
+        <FontAwesomeIcon icon={faTrashArrowUp} className="icon" />
       </div>
     </div>
   );

@@ -62,3 +62,11 @@ body {
   margin-left: 1rem;
   margin-right: 0.5rem;
 }
+
+.icon {
+  transition: transform 0.1s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
