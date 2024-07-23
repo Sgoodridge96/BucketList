@@ -9,7 +9,7 @@ export const BucketListWrapper = () => {
   const addToList = (listItem) => {
     setBktList([
       ...bktList,
-      { id: uuidv4(), task: listItem, completed: false, isEditing: false },
+      { id: uuidv4(), addItem: listItem, completed: false, isEditing: false },
     ]);
   };
 
@@ -18,7 +18,10 @@ export const BucketListWrapper = () => {
     (
       <div className="BucketListWrapper">
         <BucketListForm addToList={addToList} />
-        <BucketList bktList={bktList} />
+        {/* add an item to the list */}
+        {bktList.map((listItem, index) => (
+          <BucketList addItem={listItem} key={index} />
+        ))}
       </div>
     )
   );

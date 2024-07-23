@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 
-export const BucketList = () => {
+export const BucketList = ({ addItem }) => {
   return (
     <div className="BucketList">
-      {/* <p> element is to test icons when added to the list */}
-      <p>Edit this </p>
+      {/* */}
+      <p>{addItem.addItem}</p>
       <div>
         <FontAwesomeIcon icon={faPenToSquare} />
         <FontAwesomeIcon icon={faTrashArrowUp} />
