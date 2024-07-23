@@ -63,6 +63,10 @@ body {
 }
 
 .fa-trash-arrow-up {
+  margin-left: 0.4rem;
+  margin-right: 0.5rem;
+}
+.fa-pen-to-square {
   margin-left: 1rem;
   margin-right: 0.5rem;
 }
@@ -81,7 +85,15 @@ body {
 }
 
 .title {
+  background: rgb(174, 174, 174);
   font-size: 180%;
   font-variant: small-caps;
   margin-bottom: 0.5rem;
+}
+
+.completed {
+  color: rgb(0, 0, 0);
+  text-decoration: line-through;
+  font-style: italic;
+  cursor: pointer;
 }
