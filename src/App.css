@@ -72,3 +72,7 @@ body {
 .icon:hover {
   transform: scale(1.2);
 }
+
+.current-list {
+  scale: 130%;
+}

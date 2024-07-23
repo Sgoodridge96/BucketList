@@ -17,9 +17,9 @@ export const BucketListWrapper = () => {
     console.log(bktList),
     (
       <div className="BucketListWrapper">
-        {" "}
-        My Bucket List
+        Test Bucket List App
         <BucketListForm addToList={addToList} />
+        <p className="current-list">Current Bucket List</p>
         {/* add an item to the list */}
         {bktList.map((listItem, index) => (
           <BucketList addItem={listItem} key={index} />
