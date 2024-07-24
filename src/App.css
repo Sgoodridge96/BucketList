@@ -69,6 +69,7 @@ body {
 .fa-pen-to-square {
   margin-left: 1rem;
   margin-right: 0.5rem;
+  cursor: pointer;
 }
 
 .icon {

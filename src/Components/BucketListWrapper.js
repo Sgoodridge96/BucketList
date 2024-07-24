@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BucketListForm } from "./BucketListForm";
 import { v4 as uuidv4 } from "uuid";
 import { BucketList } from "./BucketList";
+import { EditListForm } from "./EditItem";
 
 export const BucketListWrapper = () => {
   const [bktList, setBktList] = useState([]);
@@ -23,6 +24,30 @@ export const BucketListWrapper = () => {
     );
   };
 
+  const deleteItem = (id) => {
+    setBktList(bktList.filter((listItem) => listItem.id !== id));
+  };
+
+  const editItem = (id) => {
+    setBktList(
+      bktList.map((listItem) =>
+        listItem.id === id
+          ? { ...listItem, isEditing: !listItem.isEditing }
+          : listItem
+      )
+    );
+  };
+
+  const editBktList = (task, id) => {
+    setBktList(
+      bktList.map((listItem) =>
+        listItem.id === id
+          ? { ...listItem, task, isEditing: !listItem.isEditing }
+          : listItem
+      )
+    );
+  };
+
   return (
     console.log(bktList),
     (
@@ -31,13 +56,19 @@ export const BucketListWrapper = () => {
         <BucketListForm addToList={addToList} />
         <p className="current-list">Current Bucket List</p>
         {/* add an item to the list */}
-        {bktList.map((listItem) => (
-          <BucketList
-            addItem={listItem}
-            key={listItem.id}
-            toggleComplete={toggleComplete}
-          />
-        ))}
+        {bktList.map((listItem, index) =>
+          listItem.isEditing ? (
+            <EditListForm editItem={editBktList} addItem={listItem} />
+          ) : (
+            <BucketList
+              addItem={listItem}
+              key={index}
+              toggleComplete={toggleComplete}
+              deleteItem={deleteItem}
+              editItem={editItem}
+            />
+          )
+        )}
       </div>
     )
   );
