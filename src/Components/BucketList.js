@@ -6,7 +6,7 @@ import {
   faTrashArrowUp,
 } from "@fortawesome/free-solid-svg-icons";
 
-export const BucketList = ({ addItem, toggleComplete }) => {
+export const BucketList = ({ addItem, toggleComplete, deleteItem }) => {
   return (
     <div className="BucketList">
       {/*When add item button is hit, add the item to the bucket list */}
@@ -23,7 +23,11 @@ export const BucketList = ({ addItem, toggleComplete }) => {
           onClick={() => toggleComplete(addItem.id)}
         />
         <FontAwesomeIcon icon={faPenToSquare} className="icon" />
-        <FontAwesomeIcon icon={faTrashArrowUp} className="icon" />
+        <FontAwesomeIcon
+          icon={faTrashArrowUp}
+          className="icon"
+          onClick={() => deleteItem(addItem.id)}
+        />
       </div>
     </div>
   );

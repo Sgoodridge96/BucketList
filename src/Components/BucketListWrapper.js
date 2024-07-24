@@ -23,6 +23,10 @@ export const BucketListWrapper = () => {
     );
   };
 
+  const deleteItem = (id) => {
+    setBktList(bktList.filter((listItem) => listItem.id !== id));
+  };
+
   return (
     console.log(bktList),
     (
@@ -36,6 +40,7 @@ export const BucketListWrapper = () => {
             addItem={listItem}
             key={listItem.id}
             toggleComplete={toggleComplete}
+            deleteItem={deleteItem}
           />
         ))}
       </div>
