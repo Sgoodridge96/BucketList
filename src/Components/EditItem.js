@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 export const EditListForm = ({ editItem, addItem }) => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(addItem.addItem);
 
-  const handleSubmit = (userInput) => {
-    userInput.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     editItem(value, addItem.id);
     setValue("");
   };
@@ -16,7 +16,7 @@ export const EditListForm = ({ editItem, addItem }) => {
         className="bucket-list-input"
         value={value}
         placeholder="Edit Item"
-        onChange={(userInput) => setValue(userInput.target.value)}
+        onChange={(e) => setValue(e.target.value)}
       />
       <button type="submit" className="bucket-list-btn">
         Edit
