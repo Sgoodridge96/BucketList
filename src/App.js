@@ -1,11 +1,20 @@
-
-import './App.css';
-import { BucketListWrapper } from './Components/BucketListWrapper';
+// In App.js
+import React from "react";
+import { BucketListWrapper } from "./Components/BucketListWrapper";
+import { Map } from "./Components/Map";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <BucketListWrapper />
+      <div className="bucket-list-container">
+        <div className="bucket-list-wrapper">
+          <BucketListWrapper />
+        </div>
+        <div className="map-container">
+          <Map />
+        </div>
+      </div>
     </div>
   );
 }

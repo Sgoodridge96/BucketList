@@ -49,16 +49,18 @@ export const BucketListWrapper = () => {
   };
 
   return (
-    console.log(bktList),
-    (
-      <div className="BucketListWrapper">
-        <p className="title">Test Bucket List App</p>
-        <BucketListForm addToList={addToList} />
-        <p className="current-list">Current Bucket List</p>
-        {/* add an item to the list */}
+    <div className="BucketListWrapper">
+      <p className="title">Test Bucket List App</p>
+      <BucketListForm addToList={addToList} />
+      <p className="current-list">Current Bucket List</p>
+      <div className="bucket-list">
         {bktList.map((listItem, index) =>
           listItem.isEditing ? (
-            <EditListForm editItem={editBktList} addItem={listItem} />
+            <EditListForm
+              key={index}
+              editItem={editBktList}
+              addItem={listItem}
+            />
           ) : (
             <BucketList
               addItem={listItem}
@@ -70,6 +72,6 @@ export const BucketListWrapper = () => {
           )
         )}
       </div>
-    )
+    </div>
   );
 };
