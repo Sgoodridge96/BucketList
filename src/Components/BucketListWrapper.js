@@ -3,7 +3,6 @@ import { BucketListForm } from "./BucketListForm";
 import { v4 as uuidv4 } from "uuid";
 import { BucketList } from "./BucketList";
 import { EditListForm } from "./EditItem";
-import { Map } from "./Map";
 
 export const BucketListWrapper = () => {
   const [bktList, setBktList] = useState([]);
@@ -54,29 +53,24 @@ export const BucketListWrapper = () => {
       <p className="title">Test Bucket List App</p>
       <BucketListForm addToList={addToList} />
       <p className="current-list">Current Bucket List</p>
-      <div className="content">
-        <div className="bucket-list">
-          {bktList.map((listItem, index) =>
-            listItem.isEditing ? (
-              <EditListForm
-                key={index}
-                editItem={editBktList}
-                addItem={listItem}
-              />
-            ) : (
-              <BucketList
-                addItem={listItem}
-                key={index}
-                toggleComplete={toggleComplete}
-                deleteItem={deleteItem}
-                editItem={editItem}
-              />
-            )
-          )}
-        </div>
-        <div className="map-container">
-          <Map />
-        </div>
+      <div className="bucket-list">
+        {bktList.map((listItem, index) =>
+          listItem.isEditing ? (
+            <EditListForm
+              key={index}
+              editItem={editBktList}
+              addItem={listItem}
+            />
+          ) : (
+            <BucketList
+              addItem={listItem}
+              key={index}
+              toggleComplete={toggleComplete}
+              deleteItem={deleteItem}
+              editItem={editItem}
+            />
+          )
+        )}
       </div>
     </div>
   );
