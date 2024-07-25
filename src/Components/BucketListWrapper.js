@@ -50,27 +50,34 @@ export const BucketListWrapper = () => {
   };
 
   return (
-    console.log(bktList),
-    (
-      <div className="BucketListWrapper">
-        <p className="title">Test Bucket List App</p>
-        <BucketListForm addToList={addToList} />
-        <p className="current-list">Current Bucket List</p>
-        {/* add an item to the list */}
-        {bktList.map((listItem, index) =>
-          listItem.isEditing ? (
-            <EditListForm editItem={editBktList} addItem={listItem} />
-          ) : (
-            <BucketList
-              addItem={listItem}
-              key={index}
-              toggleComplete={toggleComplete}
-              deleteItem={deleteItem}
-              editItem={editItem}
-            />
-          )
-        )}
+    <div className="BucketListWrapper">
+      <p className="title">Test Bucket List App</p>
+      <BucketListForm addToList={addToList} />
+      <p className="current-list">Current Bucket List</p>
+      <div className="content">
+        <div className="bucket-list">
+          {bktList.map((listItem, index) =>
+            listItem.isEditing ? (
+              <EditListForm
+                key={index}
+                editItem={editBktList}
+                addItem={listItem}
+              />
+            ) : (
+              <BucketList
+                addItem={listItem}
+                key={index}
+                toggleComplete={toggleComplete}
+                deleteItem={deleteItem}
+                editItem={editItem}
+              />
+            )
+          )}
+        </div>
+        <div className="map-container">
+          <Map />
+        </div>
       </div>
-    )
+    </div>
   );
 };

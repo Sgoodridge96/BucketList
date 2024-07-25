@@ -101,7 +101,19 @@ body {
   cursor: pointer;
 }
 
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bucket-list {
+  flex: 1;
+  margin-right: 1rem;
+}
+
 .map-container {
   flex: 1;
   height: 100vh;
+  margin-left: 1rem;
 }
