@@ -11,6 +11,8 @@ body {
 }
 
 .BucketListWrapper {
+  display: flex;
+  flex-direction: column;
   background: rgb(174, 174, 174);
   margin-top: 4rem;
   padding: 0.5rem 1rem;
@@ -97,4 +99,9 @@ body {
   text-decoration: line-through;
   font-style: italic;
   cursor: pointer;
+}
+
+.map-container {
+  flex: 1;
+  height: 100vh;
 }
