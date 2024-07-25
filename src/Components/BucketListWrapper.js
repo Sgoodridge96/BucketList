@@ -38,11 +38,11 @@ export const BucketListWrapper = () => {
     );
   };
 
-  const editBktList = (task, id) => {
+  const editBktList = (addItem, id) => {
     setBktList(
       bktList.map((listItem) =>
         listItem.id === id
-          ? { ...listItem, task, isEditing: !listItem.isEditing }
+          ? { ...listItem, addItem, isEditing: !listItem.isEditing }
           : listItem
       )
     );
