@@ -2,22 +2,21 @@
 body {
   background: #4b4b4b;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   height: 100vh;
   width: 100vw;
   margin: 0;
 }
 
-/* Main app container */
 .App {
   display: flex;
-  width: 100%;
 }
 
 .bucket-list-container {
   display: flex;
-  width: 100%;
+  width: 80vw;
+  margin-left: 1rem;
 }
 
 .bucket-list-wrapper {
@@ -25,25 +24,26 @@ body {
   background: rgb(174, 174, 174);
   padding: 0.5rem 1rem;
   border-radius: 10px;
-  box-sizing: border-box;
+  box-sizing: content-box;
   overflow-y: auto;
   margin-right: 1rem;
 }
 
 .BucketListForm {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
 .bucket-list-input {
+  flex: 1;
   outline: none;
   background: none;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 10px;
   padding: 0.5rem;
-  margin: 2rem 0;
-  width: 100%;
-  max-width: 300px;
+  width: 12vw;
   color: #fff;
 }
 
@@ -54,12 +54,14 @@ body {
 
 .bucket-list-btn {
   display: flex;
+  flex: 0 1 auto;
   background: #ffffff;
   color: #4b4b4b;
   border: none;
   border-radius: 10px;
   padding: 0.55rem;
   margin-left: 0.5rem;
+  margin-right: 0.5rem;
   cursor: pointer;
   font-variant: small-caps;
 }
@@ -96,15 +98,17 @@ body {
 }
 
 .current-list {
+  text-align: center;
   font-size: 110%;
   font-variant: small-caps;
 }
 
 .title {
   background: rgb(174, 174, 174);
+  text-align: center;
   font-size: 180%;
   font-variant: small-caps;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .completed {

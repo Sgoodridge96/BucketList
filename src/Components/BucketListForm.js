@@ -19,7 +19,7 @@ export const BucketListForm = ({ addToList }) => {
         onChange={(userInput) => setValue(userInput.target.value)}
       />
       <button type="submit" className="bucket-list-btn">
-        Add Item
+        Add
       </button>
     </form>
   );
