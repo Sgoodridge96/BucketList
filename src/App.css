@@ -16,7 +16,6 @@ body {
 .bucket-list-container {
   display: flex;
   width: 100vw;
-  margin-left: 3rem;
 }
 
 .bucket-list-wrapper {
@@ -27,6 +26,7 @@ body {
   box-sizing: content-box;
   overflow-y: auto;
   margin-right: 1rem;
+  margin-left: 3rem;
 }
 
 .BucketListForm {
@@ -130,8 +130,12 @@ body {
   justify-content: center;
 }
 
-.map-container {
+.current-location {
   flex: 1;
   height: 80vh;
-  margin-right: 8rem;
+  margin-right: 3rem;
+}
+.map-container {
+  display: flex;
+  width: 100%;
 }
