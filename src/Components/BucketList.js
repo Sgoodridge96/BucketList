@@ -18,10 +18,11 @@ export const BucketList = ({
       <p
         onClick={() => toggleComplete(addItem.id)}
         className={`${addItem.completed ? "completed" : ""}`}
+        style={{ wordBreak: "break-word", maxWidth: "72%" }}
       >
         {addItem.addItem}
       </p>
-      <div>
+      <div className="button-container">
         <FontAwesomeIcon
           icon={faSquareCheck}
           className="icon"
