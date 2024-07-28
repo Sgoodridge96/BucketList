@@ -50,7 +50,7 @@ export const BucketListWrapper = () => {
 
   return (
     <div className="BucketListWrapper">
-      <p className="title">Test Bucket List App</p>
+      <p className="title">Bucket List App</p>
       <BucketListForm addToList={addToList} />
       <p className="current-list">Current Bucket List</p>
       <div className="bucket-list">
