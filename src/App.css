@@ -136,6 +136,28 @@ body {
   margin-right: 3rem;
 }
 .map-container {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  margin-right: -2rem;
+}
+
+.completed-items-container {
   display: flex;
-  width: 100%;
+  width: 20vw;
+  text-align: center;
+  background: rgb(174, 174, 174);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  box-sizing: content-box;
+  overflow-y: auto;
+  margin-right: 3rem;
+}
+
+.completed-items-title {
+  display: flex;
+  text-align: center;
+  font-size: 180%;
+  font-variant: small-caps;
+  margin-bottom: 1.5rem;
 }

@@ -3,6 +3,7 @@ import React from "react";
 import { BucketListWrapper } from "./Components/BucketListWrapper";
 import { Map } from "./Components/Map";
 import "./App.css";
+import { CompletedItems } from "./Components/CompletedItems";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         </div>
         <div className="map-container">
           <Map />
+        </div>
+        <div className="completed-items-container">
+          <CompletedItems />
         </div>
       </div>
     </div>
