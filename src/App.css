@@ -11,11 +11,13 @@ body {
 
 .App {
   display: flex;
+  transition: 0.3s ease;
 }
 
 .bucket-list-container {
   display: flex;
   width: 100vw;
+  transition: width 0.1s ease;
 }
 
 .bucket-list-wrapper {
@@ -136,6 +138,26 @@ body {
   margin-right: 3rem;
 }
 .map-container {
-  display: flex;
-  width: 100%;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  margin-right: -2rem;
+}
+
+.completed-items-container {
+  flex: 0 0 15%;
+  align-items: center;
+  background: rgb(174, 174, 174);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  box-sizing: content-box;
+  overflow-y: auto;
+  margin-right: 3rem;
+}
+
+.completed-items-title {
+  text-align: center;
+  font-size: 110%;
+  font-variant: small-caps;
+  margin-left: 3rem;
 }
