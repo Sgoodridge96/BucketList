@@ -3,6 +3,7 @@ import { BucketListForm } from "./BucketListForm";
 import { v4 as uuidv4 } from "uuid";
 import { BucketList } from "./BucketList";
 import { EditListForm } from "./EditItem";
+import { CompletedItems } from "./CompletedItems";
 
 export const BucketListWrapper = () => {
   const [bktList, setBktList] = useState([]);
@@ -23,6 +24,8 @@ export const BucketListWrapper = () => {
       )
     );
   };
+
+  const completedList = bktList.filter((listItem) => listItem.completed);
 
   const deleteItem = (id) => {
     setBktList(bktList.filter((listItem) => listItem.id !== id));
@@ -72,6 +75,7 @@ export const BucketListWrapper = () => {
           )
         )}
       </div>
+      <CompletedItems completedItems={completedList} />
     </div>
   );
 };
