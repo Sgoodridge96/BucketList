@@ -11,12 +11,13 @@ body {
 
 .App {
   display: flex;
+  transition: 0.3s ease;
 }
 
 .bucket-list-container {
   display: flex;
   width: 100vw;
-  margin-left: 3rem;
+  transition: width 0.1s ease;
 }
 
 .bucket-list-wrapper {
@@ -27,6 +28,7 @@ body {
   box-sizing: content-box;
   overflow-y: auto;
   margin-right: 1rem;
+  margin-left: 3rem;
 }
 
 .BucketListForm {
@@ -130,8 +132,32 @@ body {
   justify-content: center;
 }
 
-.map-container {
+.current-location {
   flex: 1;
   height: 80vh;
-  margin-right: 8rem;
+  margin-right: 3rem;
+}
+.map-container {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  margin-right: -2rem;
+}
+
+.completed-items-container {
+  flex: 0 0 15%;
+  align-items: center;
+  background: rgb(174, 174, 174);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  box-sizing: content-box;
+  overflow-y: auto;
+  margin-right: 3rem;
+}
+
+.completed-items-title {
+  text-align: center;
+  font-size: 110%;
+  font-variant: small-caps;
+  margin-left: 3rem;
 }
